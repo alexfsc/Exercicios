@@ -1,2 +1,2 @@
 # Exercicios
- Treinamento
+Meus treinamentos de programação
