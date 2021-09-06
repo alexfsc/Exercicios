@@ -1,2 +1,2 @@
 # Exercicios
-Meus treinamentos de programação
+Meus treinamentos de programação usando o GitHub
