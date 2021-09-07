@@ -4,11 +4,11 @@ pygame.init()
 
 AMARELO = (255,255,0)
 PRETO = (0,0,0)
-RAIO = 30
+RAIO = 20
 centro_x = 1
 centro_y = 1
-vel_x = 0.1
-vel_y = 0.1
+vel_x = 0
+vel_y = 0
 
 
 
@@ -33,20 +33,28 @@ while True:
     pygame.display.update()
 
 
-    if centro_x + RAIO > 640:
-        vel_x = -0.1
-    if centro_x - RAIO < 0:
-        vel_x = 0.1
-
-    if centro_y + RAIO > 300:
-        vel_y = -0.1
-    if centro_y - RAIO < 0:
-        vel_y = 0.1
-
     centro_x = centro_x + vel_x
     centro_y = centro_y + vel_y
 
-
-    for e in pygame.event.get():
+    evento = pygame.event.get()
+    for e in evento:
             if e.type == pygame.QUIT:
                 exit()
+            if e.type == pygame.KEYDOWN:
+                if e.key == pygame.K_RIGHT:
+                    vel_x = 0.1
+
+                elif e.key == pygame.K_LEFT:
+                    vel_x = -0.1
+
+                elif e.key == pygame.K_UP:
+                    vel_y = -0.1
+
+                elif e.key == pygame.K_DOWN:
+                    vel_y = 0.1
+            elif e.type == pygame.KEYUP:
+                vel_y = 0
+                vel_x = 0
+
+
+
