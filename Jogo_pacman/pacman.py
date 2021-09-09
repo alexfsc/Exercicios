@@ -5,8 +5,8 @@ pygame.init()
 AMARELO = (255,255,0)
 PRETO = (0,0,0)
 RAIO = 20
-centro_x = 1
-centro_y = 1
+centro_x = 1 + RAIO
+centro_y = 1 + RAIO
 vel_x = 0
 vel_y = 0
 
